@@ -1,4 +1,7 @@
 {
+  // ルーラー
+  "editor.rulers": [70, 80],
+
   // python path
   "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
 
