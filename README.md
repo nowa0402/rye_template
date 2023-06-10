@@ -39,7 +39,6 @@ name = "{プロジェクト名記載}"
 description = "{説明追加}"
 authors = ["{必要であれば記載}"]
 
-
 [tool.black]
 # 改行文字数設定
 line_length = 80
