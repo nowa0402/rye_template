@@ -1,0 +1,47 @@
+[project]
+name = "my_project"
+version = "0.1.0"
+description = "Add a short description here"
+authors = []
+dependencies = []
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = ["black", "flake8", "mypy", "isort", "pyproject-flake8"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.black]
+# 最大文字数 指定文字数を超えたら改行
+line_length = 80
+
+[tool.flake8]
+# blackの設定に合わせる
+max-line-length = 80
+# 警告非表示一覧
+extend-ignore = ["E203", "W503"]
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+# エラー時のメッセージを詳細表示
+show_error_context = true
+# エラー発生箇所の行数/列数を表示
+show_column_numbers = true
+# サードパーティ製モジュールの型チェックを無視
+ignore_missing_imports = true
+# 関数の引数/戻り値に型指定必須
+disallow_untyped_defs = true
+# デフォルト引数にNoneを取る場合、型アノテーションにOptional必須
+no_implicit_optional = true
+# 戻り値がAny型ではない関数の戻り値がAny型のとき警告
+warn_return_any = true
+# 冗長なキャストに警告
+warn_redundant_casts = true
