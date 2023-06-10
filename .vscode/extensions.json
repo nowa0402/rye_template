@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "njpwerner.autodocstring",
+    "ms-python.isort",
+    "tamasfe.even-better-toml",
+    "ms-python.vscode-pylance"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  // ルーラー
+  "editor.rulers": [70, 80],
+
+  // python path
+  "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+
+  // black
+  "editor.formatOnSave": true,
+  "python.formatting.provider": "black",
+  "python.formatting.blackPath": "${workspaceFolder}/.venv/bin/black",
+
+  // flake8
+  "python.linting.lintOnSave": true,
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": false,
+  "python.linting.flake8Enabled": true,
+  // pyproject-flake8 pflake8を指定
+  "python.linting.flake8Path": "${workspaceFolder}/.venv/bin/pflake8",
+
+  // mypy
+  "python.linting.mypyEnabled": true,
+  "python.linting.mypyPath": "${workspaceFolder}/.venv/bin/mypy",
+
+  // isort 拡張機能:ms-python.isort必須
+  "isort.path": ["${workspaceFolder}/.venv/bin/isort"],
+  "[python]": {
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    }
+  }
+}
