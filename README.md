@@ -82,30 +82,40 @@ $ rye sync
 
 `.venv\Scripts\activate`
 
-抜けるには`deactivate`コマンド※実行
+抜けるには`deactivate`コマンド実行
 ※仮想環境内で有効なコマンド
 
-## 開発用パッケージ
+## Formatter Linter
 
-### formatter
+本テンプレートは以下のフォーマッター・リンターを採用している。
 
-- black
-- isort
-- flake8
-- mypy
-- pyproject-flake8
+- [black](https://github.com/psf/black)
+- [isort](https://github.com/PyCQA/isort)
+- [flake8](https://github.com/PyCQA/flake8)
+- [mypy](https://github.com/python/mypy)
+- [pyproject-flake8](https://github.com/csachs/pyproject-flake8)
 
-`pyproject-flake8`は`flake8`が`pyproject.toml`の設定を反映できないため導入している
+`pyproject-flake8`は`flake8`が`pyproject.toml`の設定を反映できないため導入している。
+
 `pyproject-flake8`のコマンドは`pflake8`
 
 ## VSCode 設定
 
-### 推奨の拡張機能
+### 拡張機能
+
+`vscode`の拡張機能について、必須・推奨の拡張機能を記載。
+
+#### 必須
+
+| Name    | ID                         |
+| ------- | -------------------------- |
+| Python  | `ms-python.python`         |
+| Pylance | `ms-python.vscode-pylance` |
+| isort   | `ms-python.isort`          |
+
+#### 推奨
 
 | Name             | ID                         |
 | ---------------- | -------------------------- |
-| Python           | `ms-python.python`         |
-| Pylance          | `ms-python.vscode-pylance` |
-| isort            | `ms-python.isort`          |
 | autodocstring    | `njpwerner.autodocstring`  |
 | even-better-toml | `tamasfe.even-better-toml` |
