@@ -40,17 +40,26 @@ description = "{説明追加}"
 authors = ["{必要であれば記載}"]
 
 [tool.black]
-# 改行文字数設定
-line_length = 80
-
-[tool.flake8]
-# blackの設定に合わせる
-max-line-length = 80
-# 警告無視の一覧は必要に応じて追加
-extend-ignore = ["E203", "W503"]
+# 最大文字数 指定文字数を超えたら改行
+line_length = 88
 
 [tool.mypy]
-# プロジェクト毎に適切な設定を行う
+strict = true
+
+[tool.ruff]
+select = [
+    "F", # pyflakes
+    "E", # pycodestyle
+    "W", # pycodestyle warnings
+    "I", # isort
+]
+ignore = []
+line-length = 88
+
+[tool.ruff.per-file-ignores]
+# 個別設定
+# __init__.pyは未使用インポートを許容
+"__init__.py" = ["F401"]
 
 ```
 
@@ -89,14 +98,8 @@ $ rye sync
 本テンプレートは以下のフォーマッター・リンターを採用している。
 
 - [black](https://github.com/psf/black)
-- [isort](https://github.com/PyCQA/isort)
-- [flake8](https://github.com/PyCQA/flake8)
+- [ruff](https://github.com/astral-sh/ruff)
 - [mypy](https://github.com/python/mypy)
-- [pyproject-flake8](https://github.com/csachs/pyproject-flake8)
-
-`pyproject-flake8`は`flake8`が`pyproject.toml`の設定を反映できないため導入している。
-
-`pyproject-flake8`のコマンドは`pflake8`
 
 ## VSCode 設定
 
@@ -110,7 +113,7 @@ $ rye sync
 | ------- | -------------------------- |
 | Python  | `ms-python.python`         |
 | Pylance | `ms-python.vscode-pylance` |
-| isort   | `ms-python.isort`          |
+| Ruff    | `charliermarsh.ruff`       |
 
 #### 推奨
 
