@@ -4,6 +4,8 @@
     "njpwerner.autodocstring",
     "tamasfe.even-better-toml",
     "ms-python.vscode-pylance",
-    "charliermarsh.ruff"
+    "charliermarsh.ruff",
+    "ms-python.mypy-type-checker",
+    "ms-python.black-formatter"
   ]
 }
