@@ -109,11 +109,13 @@ $ rye sync
 
 #### 必須
 
-| Name    | ID                         |
-| ------- | -------------------------- |
-| Python  | `ms-python.python`         |
-| Pylance | `ms-python.vscode-pylance` |
-| Ruff    | `charliermarsh.ruff`       |
+| Name    | ID                            |
+| ------- | ----------------------------- |
+| Python  | `ms-python.python`            |
+| Pylance | `ms-python.vscode-pylance`    |
+| Ruff    | `charliermarsh.ruff`          |
+| Black   | `ms-python.black-formatter`   |
+| Mypy    | `ms-python.mypy-type-checker` |
 
 #### 推奨
 
