@@ -123,3 +123,10 @@ $ rye sync
 | ---------------- | -------------------------- |
 | autodocstring    | `njpwerner.autodocstring`  |
 | even-better-toml | `tamasfe.even-better-toml` |
+
+### settings.json
+
+windowsで使用する方は
+
+`"${workspaceFolder}/.venv/bin/{file}"`を
+`"${workspaceFolder}/.venv/Scripts/{file}`に変更して使用する。
