@@ -10,11 +10,10 @@
       // isortの並び替えをRuffで実行
       "source.organizeImports": true
     },
-    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
   },
 
   "ruff.path": ["${workspaceFolder}/.venv/bin/ruff"],
-  "black-formatter.path": ["${workspaceFolder}/.venv/bin/black"],
   "mypy-type-checker.path": ["${workspaceFolder}/.venv/bin/mypy"]
 }
