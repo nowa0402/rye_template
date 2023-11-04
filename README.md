@@ -97,7 +97,6 @@ $ rye sync
 
 本テンプレートは以下のフォーマッター・リンターを採用している。
 
-- [black](https://github.com/psf/black)
 - [ruff](https://github.com/astral-sh/ruff)
 - [mypy](https://github.com/python/mypy)
 
@@ -114,7 +113,6 @@ $ rye sync
 | Python  | `ms-python.python`            |
 | Pylance | `ms-python.vscode-pylance`    |
 | Ruff    | `charliermarsh.ruff`          |
-| Black   | `ms-python.black-formatter`   |
 | Mypy    | `ms-python.mypy-type-checker` |
 
 #### 推奨
