@@ -16,6 +16,14 @@
 - [公式ドキュメント参照](https://rye-up.com/)
 - [GitHub](https://github.com/mitsuhiko/rye)
 
+### 使用フォーマッター・リンター
+
+- Ruff
+- mypy
+
+Ruffの1.2よりフォーマッター機能が追加されたため
+フォーマッター・リンターともにRuffに集約。
+
 ### プロジェクト立ち上げ
 
 テンプレートをプロジェクト配下に配置
@@ -38,10 +46,6 @@
 name = "{プロジェクト名記載}"
 description = "{説明追加}"
 authors = ["{必要であれば記載}"]
-
-[tool.black]
-# 最大文字数 指定文字数を超えたら改行
-line_length = 88
 
 [tool.mypy]
 strict = true
