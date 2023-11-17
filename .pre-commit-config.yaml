@@ -28,3 +28,17 @@ repos:
         require_serial: true
         additional_dependencies: []
         minimum_pre_commit_version: "2.9.2"
+  -   repo: https://github.com/pre-commit/mirrors-mypy
+      rev: ''
+      hooks:
+      # Run the mypy.
+      - id: mypy
+        name: mypy
+        description: "Run 'mypy' for Python linting"
+        entry: mypy
+        language: python
+        args: [--strict, --ignore-missing-imports]
+        require_serial: true
+        additional_dependencies: []
+        minimum_pre_commit_version: '2.9.2'
+
