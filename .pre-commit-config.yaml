@@ -39,6 +39,7 @@ repos:
         language: python
         args: [--strict, --ignore-missing-imports]
         require_serial: true
+        # Add types package list
         additional_dependencies: []
         minimum_pre_commit_version: '2.9.2'
 
