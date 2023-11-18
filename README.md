@@ -132,3 +132,33 @@ windowsで使用する方は
 
 `"${workspaceFolder}/.venv/bin/{file}"`を
 `"${workspaceFolder}/.venv/Scripts/{file}`に変更して使用する。
+
+
+## pre-commit
+
+pre-commitにRuffとmypyの設定を記載している。
+コミット時に検証を行いたい場合は以下手順を踏むこと
+
+### pre-commitインストール
+
+公式参照
+- [公式](https://pre-commit.com/index.html)
+
+```bash
+pip install pre-commit
+```
+
+もしくは
+
+```bash
+brew install pre-commit
+```
+
+### 初期設定
+
+1. .pre-commit-config.yamlをプロジェクトルートに配置
+2. 以下コマンド実行
+
+```bash
+pre-commit install
+```

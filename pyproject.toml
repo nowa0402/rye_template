@@ -13,9 +13,9 @@ build-backend = "hatchling.build"
 [tool.rye]
 managed = true
 dev-dependencies = [
+    "mypy",
     # black互換のformatterが0.1.2以降
-    "mypy>=0.1.4",
-    "ruff"
+    "ruff>=0.1.4"
 ]
 
 [tool.hatch.metadata]
@@ -23,6 +23,7 @@ allow-direct-references = true
 
 [tool.mypy]
 strict = true
+ignore-missing-imports = true
 
 [tool.ruff]
 select = [
