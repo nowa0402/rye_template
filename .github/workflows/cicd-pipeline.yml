@@ -22,6 +22,6 @@ jobs:
     needs: [test_action]
     uses: ./.github/workflows/static-analysis.yml
     with:
-      lint_dir: src
+      lint_dir: src/
 
 
