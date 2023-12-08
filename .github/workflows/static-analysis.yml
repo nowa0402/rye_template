@@ -1,0 +1,37 @@
+name: Reusable workflow for static analysis
+
+on:
+  workflow_call:
+    inputs:
+      lint_dir:
+        required: true
+        type: string
+
+jobs:
+  static-code-analysis:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          # Install ruff mypy and stub libs
+          python -m pip install --upgrade pip
+          # pip install -r requirements-lint.txt
+
+          # Install cspell
+          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+          sudo apt-get install -y nodejs
+          npm install -g cspell
+      - name: Lint with ruff
+        run: |
+          ruff ${{ inputs.lint_dir }}
+      - name: Lint with mypy
+        run: |
+          mypy ${{ inputs.lint_dir }}
+      # - name: Spell check with cspell
+      #   run: |
+      #     cspell ${{ inputs.lint_dir }}**/*.* --no-summary --no-progress
