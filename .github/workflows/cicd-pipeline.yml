@@ -1,0 +1,20 @@
+name: CI/CD Pipeline
+
+on: push
+
+env:
+  DEPLOY_STAGE: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  test_action:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Echo Test
+        run: |
+          echo "Hello World"
+          echo "Deploy Stage: $DEPLOY_STAGE"
