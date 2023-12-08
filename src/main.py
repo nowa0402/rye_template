@@ -4,3 +4,4 @@
 def main() -> None:
     """_summary_"""
     print("Hello world!")
+    print("Hellosss world!")
