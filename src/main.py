@@ -1,6 +1,6 @@
 """_summary_"""
 
 
-def main():
+def main() -> None:
     """_summary_"""
     print("Hello world!")
