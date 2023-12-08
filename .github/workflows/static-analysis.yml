@@ -20,8 +20,7 @@ jobs:
         run: |
           # Install ruff mypy and stub libs
           python -m pip install --upgrade pip
-          # pip install -r requirements-lint.txt
-          pip install ruff mypy
+          pip install -r requirements-test.txt
       - name: Lint with ruff
         run: |
           ruff ${{ inputs.lint_dir }}
