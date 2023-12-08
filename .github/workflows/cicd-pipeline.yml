@@ -18,3 +18,10 @@ jobs:
         run: |
           echo "Hello World"
           echo "Deploy Stage: $DEPLOY_STAGE"
+  lint:
+    needs: [test_action]
+    uses: ./.github/workflows/static-analysis.yml
+    with:
+      lint_dir: src
+
+
