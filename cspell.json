@@ -6,5 +6,6 @@
     "flagWords": [
     ],
     "ignorePaths": [
+        "requirements*"
     ]
 }
