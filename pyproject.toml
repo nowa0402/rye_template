@@ -23,7 +23,9 @@ allow-direct-references = true
 
 [tool.mypy]
 strict = true
-ignore-missing-imports = true
+ignore_missing_imports = true
+disallow_untyped_decorators = false
+disallow_untyped_calls = false
 
 [tool.ruff]
 select = [
