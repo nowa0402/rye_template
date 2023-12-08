@@ -24,9 +24,9 @@ jobs:
           pip install ruff mypy
 
           # Install cspell
-          curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-          sudo apt-get install -y nodejs
-          npm install -g cspell
+          # curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+          # sudo apt-get install -y nodejs
+          # npm install -g cspell
       - name: Lint with ruff
         run: |
           ruff ${{ inputs.lint_dir }}
