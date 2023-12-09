@@ -23,5 +23,14 @@ jobs:
     uses: ./.github/workflows/static-analysis.yml
     with:
       lint_dir: src/
+  
+  test:
+    needs: [test_action]
+    uses: ./.github/workflows/test.yml
+    with:
+      package_dir: src/
+      test_dir: tests/
+      requirements_file: src/requirements.txt
+
 
 
