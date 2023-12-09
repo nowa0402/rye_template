@@ -4,6 +4,7 @@ on:
   workflow_call:
     inputs:
       lint_dir:
+        description: "Path to the directory to lint"
         required: true
         type: string
 
