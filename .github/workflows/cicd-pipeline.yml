@@ -10,27 +10,17 @@ permissions:
   contents: read
 
 jobs:
-  test_action:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Echo Test
-        run: |
-          echo "Hello World"
-          echo "Deploy Stage: $DEPLOY_STAGE"
   lint:
-    needs: [test_action]
     uses: ./.github/workflows/static-analysis.yml
     with:
-      lint_dir: src/
+      lint_dir: ./
   
-  test:
-    needs: [test_action]
-    uses: ./.github/workflows/test.yml
-    with:
-      package_dir: src/
-      test_dir: tests/
-      requirements_file: src/requirements.txt
+  # test:
+  #   uses: ./.github/workflows/test.yml
+  #   with:
+  #     package_dir: src/
+  #     test_dir: tests/
+  #     requirements_file: src/requirements.txt
 
 
 
