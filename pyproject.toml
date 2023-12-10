@@ -15,7 +15,9 @@ managed = true
 dev-dependencies = [
     "mypy",
     # black互換のformatterが0.1.2以降
-    "ruff>=0.1.4"
+    "ruff>=0.1.4",
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
 ]
 
 [tool.hatch.metadata]
