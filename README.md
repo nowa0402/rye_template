@@ -133,7 +133,6 @@ windowsで使用する方は
 `"${workspaceFolder}/.venv/bin/{file}"`を
 `"${workspaceFolder}/.venv/Scripts/{file}`に変更して使用する。
 
-
 ## pre-commit
 
 pre-commitにRuffとmypyの設定を記載している。
@@ -142,6 +141,7 @@ pre-commitにRuffとmypyの設定を記載している。
 ### pre-commitインストール
 
 公式参照
+
 - [公式](https://pre-commit.com/index.html)
 
 ```bash
