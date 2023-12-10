@@ -2,11 +2,22 @@
     "version": "0.2",
     "language": "en",
     "words": [
-        "Hellosss"
+        "Mypy",
+        "isort",
+        "venv",
+        // README.md words
+        "pyproject",
+        "autodocstring",
+        "charliermarsh",
+        "njpwerner",
+        "pycodestyle",
+        "pyflakes",
+        "Pylance",
+        "tamasfe"
     ],
-    "flagWords": [
-    ],
+    "flagWords": [],
     "ignorePaths": [
-        "requirements*"
+        "requirements*",
+        ".pre-commit-config.yaml"
     ]
 }
