@@ -162,3 +162,20 @@ brew install pre-commit
 ```bash
 pre-commit install
 ```
+
+## Github Actions
+
+`lint`と`pytest`を行うCI/CDのtemplateを用意している。
+
+### lint.yml
+
+以下の静的解析を行う
+
+- ruff
+- mypy
+- cspell
+
+### test.yml
+
+`pytest`によるテストコードの自動実施
+カバレッジを表示してくれる
