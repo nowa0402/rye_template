@@ -1,4 +1,4 @@
-name: Reusable workflow for static analysis
+name: Reusable workflow for linting
 
 on:
   workflow_call:
@@ -9,7 +9,7 @@ on:
         type: string
 
 jobs:
-  static-code-analysis:
+  lint:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
