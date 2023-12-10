@@ -1,0 +1,38 @@
+name: Reusable workflow for unit tests
+
+on:
+  workflow_call:
+    inputs:
+      package_dir:
+        description: "Path to the package directory containing the module to be tested"
+        required: true
+        type: string
+      test_dir:
+        description: "Path to the test directory"
+        required: true
+        type: string
+      requirements_file:
+        description: "Path to the requirements file containing the dependencies"
+        required: true
+        type: string
+
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pytest pytest-cov pytest-mock
+          pip install -r ${{ inputs.requirements_file }}
+      - name: Run unit tests
+        env:
+          ENV: ${{(github.ref == 'refs/heads/main' && 'prod') || 'dev'}}
+          # please specity the environment variables to be used for unit tests
+        run: |
+          pytest -v --cov=${{ inputs.package_dir }} --cov-report=term-missing ${{ inputs.test_dir }}

@@ -15,7 +15,9 @@ managed = true
 dev-dependencies = [
     "mypy",
     # black互換のformatterが0.1.2以降
-    "ruff>=0.1.4"
+    "ruff>=0.1.4",
+    "pytest>=7.4.3",
+    "pytest-cov>=4.1.0",
 ]
 
 [tool.hatch.metadata]
@@ -23,7 +25,9 @@ allow-direct-references = true
 
 [tool.mypy]
 strict = true
-ignore-missing-imports = true
+ignore_missing_imports = true
+disallow_untyped_decorators = false
+disallow_untyped_calls = false
 
 [tool.ruff]
 select = [

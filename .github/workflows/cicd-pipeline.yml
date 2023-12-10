@@ -1,0 +1,32 @@
+name: CI/CD Pipeline
+
+on: push
+
+env:
+  DEPLOY_STAGE: ${{ github.ref == 'refs/heads/main' && 'prod' || 'dev' }}
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  echo_stage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Echo stage
+        run: echo "Deploying to $DEPLOY_STAGE"
+
+  # lint:
+  #   uses: ./.github/workflows/lint.yml
+  #   with:
+  #     lint_dir: src/
+  
+  # test:
+  #   uses: ./.github/workflows/test.yml
+  #   with:
+  #     package_dir: src/
+  #     test_dir: tests/
+  #     requirements_file: src/requirements.txt
+
+
+

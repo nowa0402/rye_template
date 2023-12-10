@@ -1,0 +1,4 @@
+# linter packages. (mypy and ruff)
+mypy>=1.7.1
+ruff>=0.1.2
+# Specify the stub packages that are required for mypy to type check the dependencies.
