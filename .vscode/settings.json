@@ -8,7 +8,7 @@
   "[python]": {
     "editor.codeActionsOnSave": {
       // isortの並び替えをRuffで実行
-      "source.organizeImports": true
+      "source.organizeImports": "explicit",
     },
     "editor.defaultFormatter": "charliermarsh.ruff",
     "editor.formatOnSave": true
