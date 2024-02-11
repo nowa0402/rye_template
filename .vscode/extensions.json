@@ -6,6 +6,10 @@
     "ms-python.vscode-pylance",
     "charliermarsh.ruff",
     "ms-python.mypy-type-checker",
-    "ms-python.black-formatter"
+  ],
+  "unwantedRecommendations": [
+    "ms-python.black-formatter",
+    "ms-python.isort",
+    "ms-python.flake8"
   ]
 }
